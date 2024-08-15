@@ -1,24 +1,37 @@
-import { useRouteError } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import error from "../assets/404.jpg";
 
-export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
-
+const Error = () => {
   return (
     <div
-      id="error-page"
-      className="flex flex-col gap-6 items-center justify-center min-h-screen bg-gray-300"
+      style={{
+        backgroundImage: `url(${error})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <h1 className="text-7xl">Oops!</h1>
-      <p>
-        404 Not Found: The requested URL was not found on this server. Please
-        check the URL and try again.
-      </p>
-
-      <button className="btn">
-        <Link to="/">Go Back</Link>
-      </button>
+      <Helmet>
+        <title>Error !</title>
+      </Helmet>
+      <div className="text-center pt-16 space-y-3">
+        <span className="text-5xl font-bold text-[#491112] ">Error </span>
+        <span className="text-3xl font-medium text-[#491112]">
+          Page not found
+        </span>
+        <p className="font-semibold text-lg text-[#491112]">
+          Sorry, the page you are looking for doesnt exist.
+        </p>
+      </div>
+      <div className="flex items-end justify-center min-h-[calc(100vh-165px)]">
+        <Link to="/">
+          <button className="btn btn-md  lg:btn-lg bg-[#491112] text-headD font-raleway text-base font-semibold hover:bg-[black] ">
+            Go Back
+          </button>
+        </Link>
+      </div>
     </div>
   );
-}
+};
+
+export default Error;

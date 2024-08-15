@@ -1,18 +1,69 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home";
-import ErrorPage from "../Components/Error";
 import Root from "../Layouts/Root";
+import AddCrafts from "../Pages/AddCrafts";
+import AllCrafts from "../Pages/AllCrafts";
+import MyCrafts from "../Pages/MyCrafts";
+import Details from "../Pages/Details";
+import UpdateCrafts from "../Pages/UpdateCrafts";
+import LogIn from "../Pages/LogIn";
+import Register from "../Pages/Register";
+import PrivateRoute from "./PrivateRoute";
+import Error from "../Components/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <ErrorPage />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/add",
+        element: (
+          <PrivateRoute>
+            <AddCrafts></AddCrafts>,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/all",
+        element: <AllCrafts></AllCrafts>,
+      },
+      {
+        path: "/my",
+        element: (
+          <PrivateRoute>
+            <MyCrafts></MyCrafts>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/details",
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/update",
+        element: (
+          <PrivateRoute>
+            <UpdateCrafts></UpdateCrafts>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/login",
+        element: <LogIn></LogIn>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },
