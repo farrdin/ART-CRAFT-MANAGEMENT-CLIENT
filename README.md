@@ -1,5 +1,5 @@
 Website Name : 'CraftyHub',
-Catergoty Name : 'Paper Crafts & Glass Art',
+Catergoty Name : 'Painting and Drawing',
 Live Site Link : https://prb9-a10.web.app/
 
 Key Features of website :

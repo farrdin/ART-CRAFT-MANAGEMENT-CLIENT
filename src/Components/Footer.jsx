@@ -1,6 +1,6 @@
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiSnapcraft } from "react-icons/si";
+import logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -49,7 +49,9 @@ const Footer = () => {
       </footer>
       <footer className="footer bg-backL dark:bg-backD text-base-content border-base-300 border-t px-10 py-4">
         <aside className="grid-flow-col items-center">
-          <SiSnapcraft className="text-5xl text-butL dark:text-butD" />
+          <Link to="/">
+            <img src={logo} className="h-10" />
+          </Link>
           <Link
             to="/"
             className="text-paraL dark:text-paraD text-2xl font-merri font-bold"
@@ -63,13 +65,13 @@ const Footer = () => {
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
             <Link to="#">
-              <FaYoutube className="text-xl text-butL dark:text-butD  bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600" />
+              <FaYoutube className="text-xl text-butL dark:text-butD  bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-[red] hover:dark:text-[red]" />
             </Link>
             <Link to="#">
-              <FaXTwitter className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600" />
+              <FaXTwitter className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-secondary hover:dark:text-secondary" />
             </Link>
             <Link to="#">
-              <FaFacebookF className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600" />
+              <FaFacebookF className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-[blue] hover:dark:text-[blue]" />
             </Link>
           </div>
         </nav>
