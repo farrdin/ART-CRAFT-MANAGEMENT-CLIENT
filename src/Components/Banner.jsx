@@ -205,7 +205,7 @@ const Banner = () => {
                 </>
               </h1>
               <button
-                className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL "
+                className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL hover:text-headL dark:hover:text-headD"
                 onClick={() => scrollToSection("category")}
               >
                 View Categories
