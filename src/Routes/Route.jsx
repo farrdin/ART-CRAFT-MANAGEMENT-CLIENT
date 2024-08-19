@@ -10,6 +10,9 @@ import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../Components/Error";
+import Category from "../Pages/Category";
+import Profile from "../Pages/Profile";
+import About from "../Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +28,7 @@ const router = createBrowserRouter([
         path: "/add",
         element: (
           <PrivateRoute>
-            <AddCrafts></AddCrafts>,
+            <AddCrafts></AddCrafts>
           </PrivateRoute>
         ),
       },
@@ -42,7 +45,11 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/details",
+        path: "/category/:id",
+        element: <Category></Category>,
+      },
+      {
+        path: "/details/:id",
         element: (
           <PrivateRoute>
             <Details></Details>
@@ -50,7 +57,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/update",
+        path: "/update/:id",
         element: (
           <PrivateRoute>
             <UpdateCrafts></UpdateCrafts>
@@ -64,6 +71,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
     ],
   },

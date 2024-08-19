@@ -1,8 +1,78 @@
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import bg from "../assets/bg.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthProvider";
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const LogIn = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(email, password);
+    logIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire({
+          title: "Congratulations!",
+          text: "Signed In  Successfully!",
+          icon: "success",
+          timer: 2000,
+        });
+        e.target.reset();
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 1500);
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error("Invalid Email or Password", { theme: "colored" });
+      });
+  };
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire({
+          title: "Congratulations!",
+          text: "Google Signed In  Successfully with!",
+          icon: "success",
+          timer: 2000,
+        });
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 1500);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  const handleGitHubLogin = () => {
+    githubLogin()
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire({
+          title: "Congratulations!",
+          text: "Github Signed In  Successfully with!",
+          icon: "success",
+          timer: 2000,
+        });
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 1500);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div className="bg-cover" style={{ backgroundImage: `url(${bg})` }}>
       <div className="w-[85%] mx-auto py-10">
@@ -22,6 +92,7 @@ const LogIn = () => {
           <div className="my-6 space-y-4">
             <button
               aria-label="Login with Google"
+              onClick={handleGoogleLogin}
               type="button"
               className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600  bg-butL dark:bg-butD hover:bg-butD hover:dark:bg-butL text-paraD dark:text-headL hover:dark:text-paraD hover:text-headL  "
             >
@@ -29,6 +100,7 @@ const LogIn = () => {
               <p>Login with Google</p>
             </button>
             <button
+              onClick={handleGitHubLogin}
               aria-label="Login with GitHub"
               role="button"
               className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600  bg-butL dark:bg-butD hover:bg-butD hover:dark:bg-butL text-paraD dark:text-headL hover:dark:text-paraD hover:text-headL"
@@ -42,7 +114,7 @@ const LogIn = () => {
             <p className="px-3 dark:text-gray-600">OR</p>
             <hr className="w-full dark:text-gray-600" />
           </div>
-          <form noValidate="" action="" className="space-y-8">
+          <form onSubmit={handleLogin} className="space-y-8">
             <div className="space-y-4">
               <div className="space-y-2">
                 <label
@@ -82,10 +154,7 @@ const LogIn = () => {
                 </a>
               </div>
             </div>
-            <button
-              type="button"
-              className="btn bg-butL dark:bg-butD hover:bg-butD hover:dark:bg-butL text-paraD dark:text-headL hover:dark:text-paraD hover:text-headL w-full px-8 py-3 font-semibold rounded-md  dark:bg-violet-600 dark:text-gray-50  "
-            >
+            <button className="btn bg-butL dark:bg-butD hover:bg-butD hover:dark:bg-butL text-paraD dark:text-headL hover:dark:text-paraD hover:text-headL w-full px-8 py-3 font-semibold rounded-md  dark:bg-violet-600 dark:text-gray-50  ">
               Sign in
             </button>
           </form>

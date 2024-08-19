@@ -7,12 +7,12 @@ import SectionTwo from "../Components/SectionTwo";
 
 const Home = () => {
   return (
-    <div className="space-y-20">
+    <div>
       <Helmet>
         <title>CraftyHub | Home</title>
       </Helmet>
       <Banner></Banner>
-      <div className="w-[85%] mx-auto">
+      <div className="w-[85%] mx-auto space-y-20 my-20">
         <CraftItem></CraftItem>
         <CraftCategory></CraftCategory>
         <SectionOne></SectionOne>

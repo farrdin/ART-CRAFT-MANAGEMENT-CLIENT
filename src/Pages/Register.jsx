@@ -1,6 +1,60 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import bg from "../assets/bg.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthProvider";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+
 const Register = () => {
+  const navigate = useNavigate();
+  const { createUser } = useContext(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    if (password.length < 6) {
+      toast.error("You password should be minimum 6 character or long", {
+        theme: "colored",
+      });
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("You must add one Uppercase character", {
+        theme: "colored",
+      });
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      toast.error("You must add one Lowercase character", {
+        theme: "colored",
+      });
+      return;
+    } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+      toast.error("You must add one special character", {
+        theme: "colored",
+      });
+      return;
+    }
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire({
+          title: "Congratulations!",
+          text: "Your Account Created Successfully!",
+          icon: "success",
+          timer: 2000,
+        });
+        e.target.reset();
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 1500);
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error(error.message, { theme: "colored" });
+      });
+  };
+
   return (
     <div className="bg-cover" style={{ backgroundImage: `url(${bg})` }}>
       <div className="w-[85%] mx-auto py-10">
@@ -11,14 +65,14 @@ const Register = () => {
           <p className="text-sm text-center dark:text-gray-600 mb-10">
             Already have account?
             <Link
-              to="/register"
+              to="/login"
               className="hover:underline text-linL dark:text-linD"
             >
               Sign in
             </Link>
           </p>
 
-          <form noValidate="" action="" className="space-y-8">
+          <form onSubmit={handleRegister} className="space-y-8">
             <div className="space-y-4">
               <div className="space-y-2">
                 <label
@@ -88,10 +142,7 @@ const Register = () => {
                 </a>
               </div>
             </div>
-            <button
-              type="button"
-              className="btn bg-butL dark:bg-butD hover:bg-butD hover:dark:bg-butL text-paraD dark:text-headL hover:dark:text-paraD hover:text-headL w-full px-8 py-3 font-semibold rounded-md  dark:bg-violet-600 dark:text-gray-50  "
-            >
+            <button className="btn bg-butL dark:bg-butD hover:bg-butD hover:dark:bg-butL text-paraD dark:text-headL hover:dark:text-paraD hover:text-headL w-full px-8 py-3 font-semibold rounded-md  dark:bg-violet-600 dark:text-gray-50  ">
               Sign in
             </button>
           </form>

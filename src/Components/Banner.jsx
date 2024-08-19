@@ -8,11 +8,11 @@ import banner2 from "../assets/Banner/Banner2.jpg";
 import banner3 from "../assets/Banner/Banner3.jpg";
 import banner4 from "../assets/Banner/Banner4.jpg";
 import banner5 from "../assets/Banner/Banner5.jpg";
-// import { ReactTyped } from "react-typed";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Banner = () => {
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -23,7 +23,7 @@ const Banner = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 4500,
+          delay: 8500,
           disableOnInteraction: true,
         }}
         pagination={{
@@ -44,16 +44,21 @@ const Banner = () => {
               }}
             ></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white space-y-10 ">
-              <h1 className="text-center leading-10 text-4xl font-bold w-2/3 mx-auto">
-                {/* <ReactTyped
-                  strings={[
-                    "Uncover Literary Treasures:",
-                    "Where Books Speak with Every Keystroke",
-                  ]}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={Infinity}
-                /> */}
+              <h1 className="text-center leading-10 text-3xl font-raleway font-medium w-2/3 mx-auto">
+                <>
+                  <Slide>
+                    <h1 className="text-[#F3F4F6]">Welcome to CraftyHub</h1>
+                  </Slide>
+                  <Fade
+                    className="text-[#F3F4F6]"
+                    delay={1e3}
+                    cascade
+                    damping={1e-1}
+                  >
+                    your ultimate Art & Craft store, where creativity comes to
+                    life!
+                  </Fade>
+                </>
               </h1>
               <button
                 className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL "
@@ -75,16 +80,21 @@ const Banner = () => {
               }}
             ></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white space-y-10 ">
-              <h1 className="text-center leading-10 text-4xl font-bold w-2/3 mx-auto">
-                {/* <ReactTyped
-                  strings={[
-                    "Uncover Literary Treasures:",
-                    "Where Books Speak with Every Keystroke",
-                  ]}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={Infinity}
-                /> */}
+              <h1 className="text-center leading-10 text-3xl font-raleway font-medium w-2/3 mx-auto">
+                <>
+                  <Slide>
+                    <h1 className="text-[#F3F4F6]">Welcome to CraftyHub</h1>
+                  </Slide>
+                  <Fade
+                    className="text-[#F3F4F6]"
+                    delay={1e3}
+                    cascade
+                    damping={1e-1}
+                  >
+                    your ultimate Art & Craft store, where creativity comes to
+                    life!
+                  </Fade>
+                </>
               </h1>
               <button
                 className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL "
@@ -106,16 +116,21 @@ const Banner = () => {
               }}
             ></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white space-y-10 ">
-              <h1 className="text-center leading-10 text-4xl font-bold w-2/3 mx-auto">
-                {/* <ReactTyped
-                  strings={[
-                    "Uncover Literary Treasures:",
-                    "Where Books Speak with Every Keystroke",
-                  ]}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={Infinity}
-                /> */}
+              <h1 className="text-center leading-10 text-3xl font-raleway font-medium w-2/3 mx-auto">
+                <>
+                  <Slide>
+                    <h1 className="text-[#F3F4F6]">Welcome to CraftyHub</h1>
+                  </Slide>
+                  <Fade
+                    className="text-[#F3F4F6]"
+                    delay={1e3}
+                    cascade
+                    damping={1e-1}
+                  >
+                    your ultimate Art & Craft store, where creativity comes to
+                    life!
+                  </Fade>
+                </>
               </h1>
               <button
                 className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL "
@@ -137,16 +152,21 @@ const Banner = () => {
               }}
             ></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white space-y-10 ">
-              <h1 className="text-center leading-10 text-4xl font-bold w-2/3 mx-auto">
-                {/* <ReactTyped
-                  strings={[
-                    "Uncover Literary Treasures:",
-                    "Where Books Speak with Every Keystroke",
-                  ]}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={Infinity}
-                /> */}
+              <h1 className="text-center leading-10 text-3xl font-raleway font-medium w-2/3 mx-auto">
+                <>
+                  <Slide>
+                    <h1 className="text-[#F3F4F6]">Welcome to CraftyHub</h1>
+                  </Slide>
+                  <Fade
+                    className="text-[#F3F4F6]"
+                    delay={1e3}
+                    cascade
+                    damping={1e-1}
+                  >
+                    your ultimate Art & Craft store, where creativity comes to
+                    life!
+                  </Fade>
+                </>
               </h1>
               <button
                 className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL "
@@ -168,16 +188,21 @@ const Banner = () => {
               }}
             ></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white space-y-10 ">
-              <h1 className="text-center leading-10 text-4xl font-bold w-2/3 mx-auto">
-                {/* <ReactTyped
-                  strings={[
-                    "Uncover Literary Treasures:",
-                    "Where Books Speak with Every Keystroke",
-                  ]}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={Infinity}
-                /> */}
+              <h1 className="text-center leading-10 text-3xl font-raleway font-medium w-2/3 mx-auto">
+                <>
+                  <Slide>
+                    <h1 className="text-[#F3F4F6]">Welcome to CraftyHub</h1>
+                  </Slide>
+                  <Fade
+                    className="text-[#F3F4F6]"
+                    delay={1e3}
+                    cascade
+                    damping={1e-1}
+                  >
+                    your ultimate Art & Craft store, where creativity comes to
+                    life!
+                  </Fade>
+                </>
               </h1>
               <button
                 className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL "

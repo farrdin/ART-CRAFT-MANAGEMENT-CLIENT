@@ -1,20 +1,20 @@
+import { createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
-  GoogleAuthProvider,
-  GithubAuthProvider,
   signOut,
+  GithubAuthProvider,
+  GoogleAuthProvider,
 } from "firebase/auth";
-import { createContext, useEffect, useState } from "react";
 import app from "../../firebase.cofig";
 
-export const AuthContext = createContext(true);
+export const AuthContext = createContext();
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-const providerr = new GithubAuthProvider();
+const google = new GoogleAuthProvider();
+const github = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -31,15 +31,14 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-  const googleLogIn = () => {
+  const googleLogin = () => {
     setLoading(true);
-    return signInWithPopup(auth, provider);
+    return signInWithPopup(auth, google);
   };
-  const gitHubLogIn = () => {
+  const githubLogin = () => {
     setLoading(true);
-    return signInWithPopup(auth, providerr);
+    return signInWithPopup(auth, github);
   };
-
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
@@ -59,18 +58,19 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const authInfo = {
+    auth,
     user,
     name,
-    setName,
     photoURL,
-    setPhotoURL,
     newPassword,
-    setNewPassword,
     loading,
+    setName,
+    setPhotoURL,
+    setNewPassword,
     createUser,
     logIn,
-    googleLogIn,
-    gitHubLogIn,
+    googleLogin,
+    githubLogin,
     logOut,
   };
 

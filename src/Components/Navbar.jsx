@@ -6,6 +6,7 @@ import logo from "../assets/Logo.png";
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const { user, logOut } = useContext(AuthContext);
+
   const handleLogOut = () => {
     logOut()
       .then((result) => {
@@ -24,7 +25,6 @@ const Navbar = () => {
       .classList.toggle("dark", newTheme === "dark");
     document.querySelector("html").setAttribute("data-theme", newTheme);
   };
-
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -35,25 +35,35 @@ const Navbar = () => {
       document.querySelector("html").setAttribute("data-theme", savedTheme);
     }
   }, []);
-
   const nav = (
     <>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="add">Add Art&Crafts</NavLink>
-      </li>
-      <li>
         <NavLink to="all">Art&Craft Items</NavLink>
       </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="add">Add Art&Crafts</NavLink>
+          </li>
+          <li>
+            <NavLink to="my">My Art&Craft</NavLink>
+          </li>
+        </>
+      )}
       <li>
-        <NavLink to="my">My Art&Craft</NavLink>
+        <NavLink to="about">About</NavLink>
       </li>
     </>
   );
   return (
     <div className="navbar bg-backL dark:bg-backD shadow-lg fixed top-0 z-10">
+      {/* Name/logo/------Home/Art&Craft Item/ Add Craft Item(protected route) / My art&Craft list(protected route)------Login/Register.
+
+      logged in na thakle register/login show korbe & login e click korle login page and register e click korle register page e redirect.
+		but logged in thakle navbar e user profile pic and name show korbe. and ---logOUt--- button show korbe click korle logout hoye jabe*/}
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -118,7 +128,7 @@ const Navbar = () => {
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/updateprofile" className="justify-between">
+                <Link to="/profile" className="justify-between">
                   {!user.displayName
                     ? user.email.replace(/(?<=.{1}).*(?=@)/, "******")
                     : user.displayName}
@@ -133,8 +143,13 @@ const Navbar = () => {
         ) : (
           <>
             <Link to="login">
-              <button className="btn bg-butL dark:bg-butD text-headD font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL">
+              <button className="btn bg-butL dark:bg-butD text-headD font-raleway text-sm font-semibold hover:bg-butD dark:hover:bg-butL">
                 Login
+              </button>
+            </Link>
+            <Link to="register">
+              <button className="btn bg-butL dark:bg-butD text-headD font-raleway text-sm font-semibold hover:bg-butD dark:hover:bg-butL">
+                Register
               </button>
             </Link>
           </>
@@ -169,10 +184,4 @@ const Navbar = () => {
   );
 };
 
-{
-  /* Name/logo/------Home/Art&Craft Item/ Add Craft Item(protected route) / My art&Craft list(protected route)------Login/Register.
-
-      logged in na thakle register/login show korbe & login e click korle login page and register e click korle register page e redirect.
-		but logged in thakle navbar e user profile pic and name show korbe. and ---logOUt--- button show korbe click korle logout hoye jabe*/
-}
 export default Navbar;
