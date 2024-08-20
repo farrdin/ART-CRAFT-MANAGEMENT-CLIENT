@@ -10,7 +10,6 @@ const CraftItem = () => {
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
-  console.log(items);
   return (
     <div>
       <div className="mb-10">
@@ -27,7 +26,7 @@ const CraftItem = () => {
         {items.slice(0, 9).map((i) => (
           <div
             key={i._id}
-            className="card bg-backL dark:bg-backD  w- shadow-sm shadow-butL dark:shadow-butD"
+            className="card dark:bg-backL bg-backD  w- shadow-md shadow-butL dark:shadow-butD dark:text-headL text-headD"
           >
             <figure>
               <img src={i.photo} className="w-full h-[200px] p-2" />
@@ -38,9 +37,9 @@ const CraftItem = () => {
                 <div
                   className={`badge ${
                     i.inStock === "InStock"
-                      ? "bg-[#4CAF50] dark:bg-[#8BC34A] text-headL dark:text-headD text-xs"
+                      ? "bg-[#4CAF50] dark:bg-[#8BC34A] text-xs text-headL dark:text-headD"
                       : i.inStock === "Made to order"
-                      ? "bg-[#FF4C4C] text-headL dark:text-headD text-xs"
+                      ? "bg-[#FF4C4C]  text-xs text-headL dark:text-headD"
                       : "bg-gray-300 text-black"
                   } p-2 rounded-lg`}
                 >
@@ -52,20 +51,28 @@ const CraftItem = () => {
                 </div>
               </h2>
               <p className="text-sm">#{i.category}</p>
-              <div className="card-actions justify-end">
-                <div>
-                  <ReactStarsRating
-                    isHalf={true}
-                    isEdit={false}
-                    size="15"
-                    primaryColor="gold"
-                    secondaryColor="gray"
-                    className="flex"
-                    value={i.rating}
-                  />
-                </div>
-                <div className="badge badge-outline dark:text-headL text-headD bg-linL dark:bg-linD">
-                  ${i.price}
+              <div className="card-actions justify-between items-center">
+                <Link
+                  to={`/details/${i._id}`}
+                  className="py-1 px-3 rounded-lg bg-neutral-700 dark:bg-neutral-300 transition-all duration-300 text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butL dark:hover:bg-butD "
+                >
+                  Details
+                </Link>
+                <div className="card-actions justify-end">
+                  <div>
+                    <ReactStarsRating
+                      isHalf={true}
+                      isEdit={false}
+                      size="15"
+                      primaryColor="gold"
+                      secondaryColor="gray"
+                      className="flex"
+                      value={i.rating}
+                    />
+                  </div>
+                  <div className="badge badge-outline dark:text-headL text-headD bg-linL dark:bg-linD">
+                    ${i.price}
+                  </div>
                 </div>
               </div>
             </div>

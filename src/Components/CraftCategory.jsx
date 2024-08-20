@@ -49,12 +49,12 @@ const CraftCategory = () => {
                   src={photos[c]}
                   className="w-full p-2 h-[200px] rounded-e-2xl"
                 />
-                <div className="absolute w-full h-full bg-backD/80 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute w-full h-full bg-backD/80 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
                   <Link
                     to={`/category/${c}`}
                     className="btn  font-raleway text-base font-semibold hover:text-butL dark:hover:text-butD text-headL dark:text-headD"
                   >
-                    #{c}
+                    {c}
                   </Link>
                 </div>
               </div>

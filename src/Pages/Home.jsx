@@ -11,10 +11,14 @@ const Home = () => {
       <Helmet>
         <title>CraftyHub | Home</title>
       </Helmet>
-      <Banner></Banner>
-      <div className="w-[85%] mx-auto space-y-20 my-20">
-        <CraftItem></CraftItem>
-        <CraftCategory></CraftCategory>
+      <div className="space-y-20">
+        <Banner></Banner>
+        <div className="w-[85%] mx-auto">
+          <CraftItem className="w-[85%]"></CraftItem>
+        </div>
+        <div className="w-[85%] mx-auto">
+          <CraftCategory className="w-[85%]"></CraftCategory>
+        </div>
         <SectionOne></SectionOne>
         <SectionTwo></SectionTwo>
       </div>
