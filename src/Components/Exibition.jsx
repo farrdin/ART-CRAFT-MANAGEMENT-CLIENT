@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import back from "../assets/bg.jpg";
 import ex1 from "../assets/Content/Exibition.jpg";
 
-const SectionOne = () => {
+const Exibition = () => {
   return (
     <div>
       <div className="mb-5">
@@ -33,9 +34,12 @@ const SectionOne = () => {
               earum vel ab obcaecati sunt voluptate culpa placeat id officiis
               iusto eos. Enim dicta ipsa ipsam obcaecati.
             </p>
-            <button className="btn bg-neutral-700 dark:bg-neutral-300 transition-all duration-300 text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butL dark:hover:bg-butD">
+            <Link
+              to="about"
+              className="btn bg-neutral-700 dark:bg-neutral-300  text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butL dark:hover:bg-butD transition-transform duration-300 ease-in-out hover:scale-110"
+            >
               More Details
-            </button>
+            </Link>
           </div>
           <div className="mx-auto">
             <img src={ex1} className="w-full h-[350px]" />
@@ -46,4 +50,4 @@ const SectionOne = () => {
   );
 };
 
-export default SectionOne;
+export default Exibition;

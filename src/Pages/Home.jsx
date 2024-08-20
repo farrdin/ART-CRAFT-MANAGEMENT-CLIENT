@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 import CraftItem from "../Components/CraftItem";
 import CraftCategory from "../Components/CraftCategory";
 import Banner from "../Components/Banner";
-import SectionOne from "../Components/SectionOne";
-import SectionTwo from "../Components/SectionTwo";
+import Exibition from "../Components/Exibition";
+import Artist from "../Components/Artist";
 
 const Home = () => {
   return (
@@ -19,8 +19,10 @@ const Home = () => {
         <div className="w-[85%] mx-auto">
           <CraftCategory className="w-[85%]"></CraftCategory>
         </div>
-        <SectionOne></SectionOne>
-        <SectionTwo></SectionTwo>
+        <Exibition></Exibition>
+        <div className="w-[85%] mx-auto">
+          <Artist></Artist>
+        </div>
       </div>
     </div>
   );
