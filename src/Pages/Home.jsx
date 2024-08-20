@@ -4,6 +4,7 @@ import CraftCategory from "../Components/CraftCategory";
 import Banner from "../Components/Banner";
 import Exibition from "../Components/Exibition";
 import Artist from "../Components/Artist";
+import Comment from "../Components/Comment";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <div className="w-[85%] mx-auto">
           <Artist></Artist>
         </div>
+        <Comment></Comment>
       </div>
     </div>
   );
