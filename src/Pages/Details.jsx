@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Details = () => {
   const { id } = useParams();
@@ -21,6 +22,9 @@ const Details = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>CraftyHub | Details</title>
+      </Helmet>
       <table className="min-w-full divide-y divide-gray-200">
         <tbody>
           <tr key={details._id} className="text-center">

@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Context/AuthProvider";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const LogIn = () => {
   const location = useLocation();
@@ -75,6 +76,9 @@ const LogIn = () => {
 
   return (
     <div className="bg-cover" style={{ backgroundImage: `url(${bg})` }}>
+      <Helmet>
+        <title>CraftyHub | Log In</title>
+      </Helmet>
       <div className="w-[85%] mx-auto py-10">
         <div className="w-full mx-auto max-w-md p-4 rounded-md shadow sm:p-8 bg-backL dark:bg-backD text-headL dark:text-paraD font-raleway ">
           <h2 className="mb-3 text-3xl font-semibold text-center text-headL dark:text-headD">

@@ -13,10 +13,14 @@ import A1 from "../assets/Content/A1.jpg";
 import A2 from "../assets/Content/A2.jpg";
 import A3 from "../assets/Content/A3.jpg";
 import A4 from "../assets/Content/A4.jpg";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <div className="space-y-20">
+      <Helmet>
+        <title>CraftyHub | About</title>
+      </Helmet>
       <div className="about-us bg-base-300 dark:bg-neutral-700 py-10">
         <h1 className="w-[80%] mx-auto text-lg text-paraL dark:text-paraD font-raleway font-semibold">
           ABOUT US

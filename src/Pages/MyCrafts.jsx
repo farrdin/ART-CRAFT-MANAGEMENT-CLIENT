@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyCrafts = () => {
   const { user } = useContext(AuthContext);
@@ -77,6 +78,9 @@ const MyCrafts = () => {
   return (
     <div>
       <div className="overflow-x-auto">
+        <Helmet>
+          <title>CraftyHub | My Items</title>
+        </Helmet>
         <table className="table">
           <thead>
             <tr className="text-center">

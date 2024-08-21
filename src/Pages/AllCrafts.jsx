@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const AllCrafts = () => {
@@ -12,6 +13,9 @@ const AllCrafts = () => {
   }, [items]);
   return (
     <div>
+      <Helmet>
+        <title>CraftyHub | All Items</title>
+      </Helmet>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>

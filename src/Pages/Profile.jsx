@@ -75,11 +75,10 @@ const Profile = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>CraftyHub | Profile</title>
+      </Helmet>
       <div className="bg-base-200 my-10 rounded-2xl p-8 ">
-        <Helmet>
-          <title>CraftyHub | UpdateProfile</title>
-        </Helmet>
-
         <div className="w-full md:flex">
           <div className="md:w-1/2 mb-5 flex flex-col justify-center items-center gap-10">
             <h1 className="text-5xl font-bold text-[#4F5CC1] text-center">

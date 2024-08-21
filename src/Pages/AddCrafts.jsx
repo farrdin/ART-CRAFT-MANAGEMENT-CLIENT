@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import bg from "../assets/bg.jpg";
+import { Helmet } from "react-helmet-async";
 
 const AddCrafts = () => {
   const handleAdd = async (e) => {
@@ -96,6 +97,9 @@ const AddCrafts = () => {
 
   return (
     <div className="bg-cover" style={{ backgroundImage: `url(${bg})` }}>
+      <Helmet>
+        <title>CraftyHub | Add Item</title>
+      </Helmet>
       <div className="w-[85%] mx-auto py-6">
         <div className="w-[80%] mx-auto p-4 rounded-md shadow shadow-butL dark:shadow-butD sm:p-8 bg-backL bg-opacity-20 dark:bg-backD dark:bg-opacity-65 text-headL dark:text-paraD font-raleway">
           <h2 className="mb-10 text-3xl font-semibold text-center text-headL dark:text-headD">

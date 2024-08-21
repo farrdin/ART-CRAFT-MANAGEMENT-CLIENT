@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 
 const Category = () => {
@@ -18,6 +19,9 @@ const Category = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>CraftyHub | {id}</title>
+      </Helmet>
       <h1 className="text-3xl font-bold mb-4">{id} Items</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {items.map((i) => (
