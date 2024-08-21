@@ -34,7 +34,7 @@ const Details = () => {
             Home/DETAILS
           </p>
         </div>
-        <div className="md:flex  gap-5 bg-backL dark:bg-backD mg:border-y border-butL dark:border-butD">
+        <div className="md:flex  gap-5 bg-backL dark:bg-backD border-y border-butL dark:border-butD">
           <div className="left md:w-[35%] h-[350px] md:sticky top-0">
             <img src={details.photo} className="w-full h-full object-cover" />
           </div>
@@ -43,12 +43,11 @@ const Details = () => {
               <h1 className="text-lg text-headL dark:text-headD font-merri font-semibold">
                 {details.item}
               </h1>
-              <hr className="text-butL dark:text-butD " />
               <p className="text-sm text-paraL dark:text-paraD font-raleway font-light">
                 {details.description}
               </p>
             </div>
-            <div className="space-y-3 md:w-2/5 py-5 md:mt-16">
+            <div className="space-y-3 md:w-2/5 py-5 md:mt-12">
               <p className="flex gap-2 items-center text-base text-paraL dark:text-paraD font-raleway font-semibold ">
                 Rating :
                 <ReactStarsRating
@@ -94,7 +93,7 @@ const Details = () => {
               <div>
                 {canEdit && (
                   <Link to={`/update/${details._id}`}>
-                    <button className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL hover:text-headL hover:dark:text-headD  transform transition-transform duration-500 ease-in-out hover:scale-110">
+                    <button className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butD dark:hover:bg-butL hover:text-headL hover:dark:text-headD  transform transition-transform duration-500 ease-in-out hover:scale-90">
                       Update Item
                     </button>
                   </Link>

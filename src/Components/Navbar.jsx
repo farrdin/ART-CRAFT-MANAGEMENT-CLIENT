@@ -49,7 +49,7 @@ const Navbar = () => {
             <NavLink to="add">Add Art&Crafts</NavLink>
           </li>
           <li>
-            <NavLink to="my">My Art&Craft</NavLink>
+            <NavLink to="my">My Art&Crafts</NavLink>
           </li>
         </>
       )}
