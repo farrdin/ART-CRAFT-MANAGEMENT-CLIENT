@@ -47,7 +47,7 @@ const CraftCategory = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={photos[c]}
-                  className="w-full p-2 h-[200px] rounded-e-2xl"
+                  className="w-full p-2 h-[200px] rounded-2xl"
                 />
                 <div className="absolute w-full h-full bg-backD/80 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
                   <Link

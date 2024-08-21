@@ -13,6 +13,7 @@ import Error from "../Components/Error";
 import Category from "../Pages/Category";
 import Profile from "../Pages/Profile";
 import About from "../Pages/About";
+import "react-tooltip/dist/react-tooltip.css";
 
 const router = createBrowserRouter([
   {

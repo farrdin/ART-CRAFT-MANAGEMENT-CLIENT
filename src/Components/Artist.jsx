@@ -33,7 +33,7 @@ const Artist = () => {
                 loop={false}
                 animationData={Plus}
                 lottieRef={lottieRef1}
-                className="absolute right-[36%] bottom-[-12%]  transition-transform duration-300 ease-in-out hover:scale-150"
+                className="absolute right-[36%] bottom-[-12%]  transition-transform duration-300 ease-in-out hover:scale-150 cursor-pointer"
                 style={{ width: 100, height: 100 }}
               />
             </div>
@@ -60,7 +60,7 @@ const Artist = () => {
                   loop={false}
                   animationData={Plus}
                   lottieRef={lottieRef2}
-                  className="absolute right-[36%] bottom-[-12%]  transition-transform duration-300 ease-in-out hover:scale-150"
+                  className="absolute right-[36%] bottom-[-12%]  transition-transform duration-300 ease-in-out hover:scale-150 cursor-pointer"
                   style={{ width: 100, height: 100 }}
                 />
               </div>
@@ -87,7 +87,7 @@ const Artist = () => {
                 loop={false}
                 animationData={Plus}
                 lottieRef={lottieRef3}
-                className="absolute right-[36%] bottom-[-12%] transition-transform duration-300 ease-in-out hover:scale-150"
+                className="absolute right-[36%] bottom-[-12%]  transition-transform duration-300 ease-in-out hover:scale-150 cursor-pointer"
                 style={{ width: 100, height: 100 }}
               />
             </div>

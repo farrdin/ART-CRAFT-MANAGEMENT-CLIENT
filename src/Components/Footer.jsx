@@ -2,6 +2,7 @@ import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 const Footer = () => {
   return (
@@ -65,17 +66,33 @@ const Footer = () => {
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
             <Link to="#">
-              <FaYoutube className="text-xl text-butL dark:text-butD  bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-[red] hover:dark:text-[red]" />
+              <FaYoutube
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Subscribe us"
+                data-tooltip-place="top"
+                className="text-xl text-butL dark:text-butD  bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-[red] hover:dark:text-[red]"
+              />
             </Link>
             <Link to="#">
-              <FaXTwitter className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-secondary hover:dark:text-secondary" />
+              <FaXTwitter
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Join us"
+                data-tooltip-place="top"
+                className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-secondary hover:dark:text-secondary"
+              />
             </Link>
             <Link to="#">
-              <FaFacebookF className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-[blue] hover:dark:text-[blue]" />
+              <FaFacebookF
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Follow us"
+                data-tooltip-place="top"
+                className="text-xl text-butL dark:text-butD bg-base-300 box-content px-3 py-3 rounded-full shadow-lg shadow-butD/30 hover:shadow-inner hover:shadow-butD/30 duration-300 cursor-pointer hover:text-blue-600 hover:text-[blue] hover:dark:text-[blue]"
+              />
             </Link>
           </div>
         </nav>
       </footer>
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };
