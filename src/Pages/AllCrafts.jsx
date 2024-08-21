@@ -19,8 +19,8 @@ const AllCrafts = () => {
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
-            <tr className="text-center">
-              <th>Photo</th>
+            <tr className="text-center text-headL dark:text-headD text-base font-merri font-light ">
+              <th className="text-start">Photo</th>
               <th>Item Name</th>
               <th>Subcategory</th>
               <th>Ratings</th>
@@ -29,12 +29,15 @@ const AllCrafts = () => {
           </thead>
           <tbody>
             {items.map((a) => (
-              <tr key={a._id} className="text-center">
+              <tr
+                key={a._id}
+                className="text-center text-headL dark:text-headD text-sm font-raleway font-light"
+              >
                 <td>
                   <img
                     src={a.photo}
                     alt="Book Cover"
-                    className="w-16 h-16 object-cover"
+                    className="w-20 h-20 object-cover"
                   />
                 </td>
 
@@ -43,7 +46,9 @@ const AllCrafts = () => {
                 <td>{a.rating}</td>
                 <td>
                   <Link to={`/details/${a._id}`}>
-                    <button type="button">View Details</button>
+                    <button className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-xs font-extrabold hover:bg-butD dark:hover:bg-butL hover:text-headL hover:dark:text-headD transform transition-transform duration-500 ease-in-out hover:scale-110 ">
+                      View Details
+                    </button>
                   </Link>
                 </td>
               </tr>

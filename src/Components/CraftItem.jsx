@@ -54,9 +54,9 @@ const CraftItem = () => {
               <div className="card-actions justify-between items-center">
                 <Link
                   to={`/details/${i._id}`}
-                  className="py-1 px-3 rounded-lg bg-neutral-700 dark:bg-neutral-300 text-headD dark:text-headL font-raleway text-base font-semibold hover:bg-butL dark:hover:bg-butD transform transition-transform duration-500 ease-in-out hover:scale-125"
+                  className="py-3 px-2 rounded-lg bg-neutral-700 dark:bg-neutral-300 text-headD dark:text-headL font-raleway text-xs font-bold hover:bg-butL dark:hover:bg-butD transform transition-transform duration-500 ease-in-out hover:scale-110"
                 >
-                  Details
+                  View Details
                 </Link>
                 <div className="card-actions justify-end">
                   <div>

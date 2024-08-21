@@ -21,11 +21,11 @@ const About = () => {
       <Helmet>
         <title>CraftyHub | About</title>
       </Helmet>
-      <div className="about-us bg-base-300 dark:bg-neutral-700 py-10">
+      <div className="about-us bg-base-300 dark:bg-neutral-700 py-5">
         <h1 className="w-[80%] mx-auto text-lg text-paraL dark:text-paraD font-raleway font-semibold">
           ABOUT US
         </h1>
-        <p className="w-[80%] mx-auto text-xs text-paraL dark:text-paraD font-raleway font-thin">
+        <p className="w-[80%] mx-auto text-xs text-paraL dark:text-paraD font-raleway font-extralight">
           Home/About US
         </p>
       </div>

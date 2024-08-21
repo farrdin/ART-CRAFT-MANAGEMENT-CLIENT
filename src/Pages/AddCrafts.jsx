@@ -1,8 +1,11 @@
 import Swal from "sweetalert2";
 import bg from "../assets/bg.jpg";
 import { Helmet } from "react-helmet-async";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthProvider";
 
 const AddCrafts = () => {
+  const { user } = useContext(AuthContext);
   const handleAdd = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -133,7 +136,8 @@ const AddCrafts = () => {
                     Email address
                   </label>
                   <input
-                    required
+                    defaultValue={user.email}
+                    disabled
                     type="email"
                     name="email"
                     id="email"

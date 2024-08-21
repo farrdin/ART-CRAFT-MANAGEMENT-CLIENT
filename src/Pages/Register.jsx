@@ -86,6 +86,7 @@ const Register = () => {
                   Your Name
                 </label>
                 <input
+                  required
                   type="name"
                   name="name"
                   id="name"
@@ -101,6 +102,7 @@ const Register = () => {
                   Email address
                 </label>
                 <input
+                  required
                   type="email"
                   name="email"
                   id="email"
@@ -131,6 +133,7 @@ const Register = () => {
                   Password
                 </label>
                 <input
+                  required
                   type="password"
                   name="password"
                   id="password"

@@ -14,6 +14,8 @@ import Category from "../Pages/Category";
 import Profile from "../Pages/Profile";
 import About from "../Pages/About";
 import "react-tooltip/dist/react-tooltip.css";
+import "react-toastify/dist/ReactToastify.css";
+import BlockRoute from "./BlockRoute";
 
 const router = createBrowserRouter([
   {
@@ -67,11 +69,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <LogIn></LogIn>,
+        element: (
+          <BlockRoute>
+            <LogIn></LogIn>
+          </BlockRoute>
+        ),
       },
       {
         path: "/register",
-        element: <Register></Register>,
+        element: (
+          <BlockRoute>
+            <Register></Register>
+          </BlockRoute>
+        ),
       },
       {
         path: "/profile",
