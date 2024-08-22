@@ -20,10 +20,7 @@ const CraftCategory = () => {
   };
 
   useEffect(() => {
-    fetch(
-      "https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all",
-      { credentials: "include" }
-    )
+    fetch("https://prb9-a10.vercel.app/all", { credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
         const unique = [...new Set(data.map((c) => c.category))];

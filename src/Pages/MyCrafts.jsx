@@ -51,12 +51,9 @@ const MyCrafts = () => {
 
     if (result.isConfirmed) {
       try {
-        const response = await fetch(
-          `https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all/${id}`,
-          {
-            method: "DELETE",
-          }
-        );
+        const response = await fetch(`https://prb9-a10.vercel.app/all/${id}`, {
+          method: "DELETE",
+        });
         const data = await response.json();
         if (data.deletedCount > 0) {
           setMyCraft((prevCrafts) =>

@@ -12,8 +12,7 @@ const UpdateCrafts = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [upItems, setUpItems] = useState(null);
-  const url =
-    "https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all";
+  const url = "https://prb9-a10.vercel.app/all";
 
   useEffect(() => {
     fetch(url, { credentials: "include" })
@@ -48,16 +47,13 @@ const UpdateCrafts = () => {
       customization: customization,
       inStock: inStock,
     };
-    fetch(
-      `https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all/${id}`,
-      {
-        method: "PATCH",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updateItems),
-      }
-    )
+    fetch(`https://prb9-a10.vercel.app/all/${id}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateItems),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

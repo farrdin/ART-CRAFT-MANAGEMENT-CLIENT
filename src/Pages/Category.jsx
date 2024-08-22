@@ -8,12 +8,9 @@ const Category = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all",
-      {
-        credentials: "include",
-      }
-    )
+    fetch("https://prb9-a10.vercel.app/all", {
+      credentials: "include",
+    })
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((product) => product.category === id);

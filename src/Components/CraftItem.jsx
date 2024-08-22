@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 const CraftItem = () => {
   const [items, setItems] = useState([]);
-  const url =
-    "https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all";
+  const url = "https://prb9-a10.vercel.app/all";
   useEffect(() => {
     fetch(url, { credentials: "include" })
       .then((res) => res.json())
