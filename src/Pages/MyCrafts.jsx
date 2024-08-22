@@ -7,7 +7,7 @@ import ReactStarsRating from "react-awesome-stars-rating";
 
 const MyCrafts = () => {
   const { user } = useContext(AuthContext);
-  const url = `http://localhost:5000/mail?email=${user.email}`;
+  const url = `https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app//mail?email=${user.email}`;
   const [myCraft, setMyCraft] = useState([]);
   const [filteredCrafts, setFilteredCrafts] = useState([]);
   const [customizationFilter, setCustomizationFilter] = useState("All");
@@ -51,9 +51,12 @@ const MyCrafts = () => {
 
     if (result.isConfirmed) {
       try {
-        const response = await fetch(`http://localhost:5000/all/${id}`, {
-          method: "DELETE",
-        });
+        const response = await fetch(
+          `https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all/${id}`,
+          {
+            method: "DELETE",
+          }
+        );
         const data = await response.json();
         if (data.deletedCount > 0) {
           setMyCraft((prevCrafts) =>

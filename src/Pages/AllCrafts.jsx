@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const AllCrafts = () => {
   const [items, setItems] = useState([]);
-  const url = "http://localhost:5000/all";
+  const url =
+    "https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all";
   useEffect(() => {
     fetch(url, { credentials: "include" })
       .then((res) => res.json())

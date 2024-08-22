@@ -56,14 +56,17 @@ const AddCrafts = () => {
 
     if (result.isConfirmed) {
       try {
-        const response = await fetch("http://localhost:5000/all", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify(addItems),
-        });
+        const response = await fetch(
+          "https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all",
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            credentials: "include",
+            body: JSON.stringify(addItems),
+          }
+        );
         const data = await response.json();
         if (data.insertedId) {
           form.reset();

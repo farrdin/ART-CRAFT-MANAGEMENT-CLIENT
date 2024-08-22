@@ -8,7 +8,8 @@ const Details = () => {
   const { id } = useParams();
   const [details, setDetails] = useState([]);
   const { user } = useContext(AuthContext);
-  const url = "http://localhost:5000/all";
+  const url =
+    "https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all";
 
   useEffect(() => {
     fetch(url, { credentials: "include" })
