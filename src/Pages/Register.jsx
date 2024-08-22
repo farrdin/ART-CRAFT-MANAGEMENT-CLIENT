@@ -72,9 +72,13 @@ const Register = () => {
         </p>
       </div>
       <div className="md:flex justify-around p-5">
-        <Lottie loop={true} animationData={register} style={{ width: 450 }} />
-        <div className="md:w-[40%]">
-          <div className="w-full mx-auto max-w-md p-4 rounded-md shadow sm:p-8 bg-backL dark:bg-backD text-headL dark:text-paraD font-raleway ">
+        <Lottie
+          loop={true}
+          animationData={register}
+          className="w-full md:w-[40%]"
+        />
+        <div className="w-full md:w-[40%]">
+          <div className="h-full p-4 rounded-md shadow sm:p-8 bg-backL dark:bg-backD text-headL dark:text-paraD font-raleway ">
             <p className="text-sm text-center dark:text-gray-600 mb-10">
               Already have account?
               <Link

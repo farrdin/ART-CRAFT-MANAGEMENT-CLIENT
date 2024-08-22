@@ -114,9 +114,13 @@ const AddCrafts = () => {
         </p>
       </div>
       <div className="md:flex justify-around p-5">
-        <Lottie loop={true} animationData={welcome} style={{ width: 450 }} />
-        <div className="md:w-[50%]">
-          <div className="w-[80%] mx-auto p-4 rounded-md shadow shadow-butL dark:shadow-butD sm:p-8 bg-backL bg-opacity-20 dark:bg-backD dark:bg-opacity-65 text-headL dark:text-paraD font-raleway">
+        <Lottie
+          loop={true}
+          animationData={welcome}
+          className="w-full md:w-[50%]"
+        />
+        <div className="w-full md:w-[50%]">
+          <div className="p-8 h-full rounded-md shadow shadow-butL dark:shadow-butD bg-backL bg-opacity-20 dark:bg-backD dark:bg-opacity-65 text-headL dark:text-paraD font-raleway">
             <form onSubmit={handleAdd} className="space-y-8">
               <div className="space-y-4">
                 <div className="flex  gap-10">

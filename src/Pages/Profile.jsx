@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../Context/AuthProvider";
 import { updatePassword, updateProfile } from "firebase/auth";
 import { toast, ToastContainer } from "react-toastify";
@@ -7,8 +7,10 @@ import { Helmet } from "react-helmet-async";
 import bg from "../assets/bg.jpg";
 import Lottie from "lottie-react";
 import profile from "../../public/profile.json";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const {
     user,
     name,
@@ -18,6 +20,7 @@ const Profile = () => {
     newPassword,
     setNewPassword,
   } = useContext(AuthContext);
+
   const handleSaveChanges = async (e) => {
     e.preventDefault();
     if (newPassword) {
@@ -70,12 +73,18 @@ const Profile = () => {
       toast.error("Failed to update profile. Please try again.");
     }
   };
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
+
   if (!user) {
     return (
-      <span className="loading loading-spinner loading-lg text-secondary mx-auto flex items-center justify-center"></span>
+      <span className="loading loading-spinner loading-lg text-butL dark:text-butD mx-auto flex items-center justify-center"></span>
     );
   }
-
   return (
     <div className="bg-cover" style={{ backgroundImage: `url(${bg})` }}>
       <Helmet>
@@ -90,9 +99,16 @@ const Profile = () => {
         </p>
       </div>
 
-      <div className="py-5 md:flex justify-around">
-        <Lottie loop={true} animationData={profile} style={{ width: 450 }} />
+      <div className="p-5 md:flex justify-around">
+        <Lottie
+          loop={true}
+          animationData={profile}
+          className="w-full md:w-[40%]"
+        />
         <div className="md:w-[30%] shadow-xl shadow-butL dark:shadow-butD bg-backL dark:bg-backD  rounded-2xl ">
+          <div className="flex justify-center items-center pt-10">
+            <img src={photoURL} className="w-[100px] h-[100px] rounded-full" />
+          </div>
           <form onSubmit={handleSaveChanges} className="card-body">
             <div className="form-control">
               <label htmlFor="name">

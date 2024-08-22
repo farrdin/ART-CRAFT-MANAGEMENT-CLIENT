@@ -55,7 +55,7 @@ const About = () => {
 
           <TiHome
             className="text-5xl p-3 bg-[black] text-[white] absolute -top-[28%] left-[42%] hover:bg-butL hover:dark:bg-butD transition-all duration-700"
-            data-tooltip-id="my-tooltip"
+            data-tooltip-id="my"
             data-tooltip-content="Tools"
             data-tooltip-place="top"
           />
@@ -71,7 +71,7 @@ const About = () => {
 
           <FaLeaf
             className="text-5xl p-3 bg-[black] text-[white] absolute -top-[28%] left-[42%] hover:bg-butL hover:dark:bg-butD transition-all duration-700"
-            data-tooltip-id="my-tooltip"
+            data-tooltip-id="my"
             data-tooltip-content="Artists"
             data-tooltip-place="top"
           />
@@ -87,7 +87,7 @@ const About = () => {
 
           <FiKey
             className="text-5xl p-3 bg-[black] text-[white] absolute -top-[28%] left-[42%] hover:bg-butL hover:dark:bg-butD transition-all duration-700"
-            data-tooltip-id="my-tooltip"
+            data-tooltip-id="my"
             data-tooltip-content="Join!"
             data-tooltip-place="top"
           />
@@ -248,7 +248,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Tooltip id="my-tooltip" />
+      <Tooltip id="my" />
     </div>
   );
 };

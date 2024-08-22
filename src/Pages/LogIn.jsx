@@ -90,9 +90,13 @@ const LogIn = () => {
         </p>
       </div>
       <div className="md:flex justify-around p-5">
-        <Lottie loop={true} animationData={login} style={{ width: 450 }} />
-        <div className="md:w-[40%]">
-          <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-backL dark:bg-backD text-headL dark:text-paraD font-raleway ">
+        <Lottie
+          loop={true}
+          animationData={login}
+          className="w-full md:w-[40%]"
+        />
+        <div className="w-full md:w-[40%]">
+          <div className="p-4 rounded-md shadow bg-backL dark:bg-backD text-headL dark:text-paraD font-raleway h-full">
             <p className="text-sm text-center dark:text-gray-600">
               Dont have account?
               <Link
