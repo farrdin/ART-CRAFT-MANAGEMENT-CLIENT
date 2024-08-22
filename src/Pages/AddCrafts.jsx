@@ -57,7 +57,7 @@ const AddCrafts = () => {
     if (result.isConfirmed) {
       try {
         const response = await fetch(
-          "https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all",
+          "https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all",
           {
             method: "POST",
             headers: {

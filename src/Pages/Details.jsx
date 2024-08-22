@@ -9,7 +9,7 @@ const Details = () => {
   const [details, setDetails] = useState([]);
   const { user } = useContext(AuthContext);
   const url =
-    "https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all";
+    "https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all";
 
   useEffect(() => {
     fetch(url, { credentials: "include" })
@@ -20,7 +20,6 @@ const Details = () => {
       });
   }, [id]);
   const canEdit = user && details.email && user.email === details.email;
-  console.log(details);
   return (
     <div>
       <Helmet>

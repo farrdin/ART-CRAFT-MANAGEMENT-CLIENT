@@ -13,7 +13,7 @@ const UpdateCrafts = () => {
   const { id } = useParams();
   const [upItems, setUpItems] = useState(null);
   const url =
-    "https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all";
+    "https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all";
 
   useEffect(() => {
     fetch(url, { credentials: "include" })
@@ -49,7 +49,7 @@ const UpdateCrafts = () => {
       inStock: inStock,
     };
     fetch(
-      `https://prb9-a10-server-92i7kdtxt-fardin-ahmed-alifs-projects.vercel.app/all/${id}`,
+      `https://prb9-a10-l13xxp5yz-fardin-ahmed-alifs-projects.vercel.app/all/${id}`,
       {
         method: "PATCH",
         headers: {
