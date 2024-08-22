@@ -181,10 +181,30 @@ const About = () => {
       </div>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <img src={A1} className="h-[300px] w-full" />
-          <img src={A2} className="h-[300px] w-full" />
-          <img src={A3} className="h-[300px] w-full" />
-          <img src={A4} className="h-[300px] w-full" />
+          <div className="overflow-hidden shadow-lg shadow-butL dark:shadow-butD">
+            <img
+              src={A1}
+              className="w-full h-[300px] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110 "
+            />{" "}
+          </div>
+          <div className="overflow-hidden shadow-lg shadow-butL dark:shadow-butD">
+            <img
+              src={A2}
+              className="w-full h-[300px] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110 "
+            />{" "}
+          </div>
+          <div className="overflow-hidden shadow-lg shadow-butL dark:shadow-butD">
+            <img
+              src={A3}
+              className="w-full h-[300px] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110 "
+            />{" "}
+          </div>
+          <div className="overflow-hidden shadow-lg shadow-butL dark:shadow-butD">
+            <img
+              src={A4}
+              className="w-full h-[300px] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110 "
+            />{" "}
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[70%] mx-auto my-5">
           <div className=" mx-auto text-center p-5 space-y-3">
