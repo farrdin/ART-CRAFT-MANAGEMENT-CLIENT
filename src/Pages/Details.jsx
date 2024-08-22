@@ -26,7 +26,7 @@ const Details = () => {
         <title>CraftyHub | Details</title>
       </Helmet>
       <div>
-        <div className="about-us bg-base-300 dark:bg-neutral-600 py-5">
+        <div className="bg-base-300 dark:bg-neutral-600 py-5">
           <h1 className="w-[80%] mx-auto text-lg text-paraL dark:text-paraD font-raleway font-semibold">
             Details of {details.item}
           </h1>

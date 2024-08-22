@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import ReactStarsRating from "react-awesome-stars-rating";
 
 const Category = () => {
   const { id } = useParams();
@@ -22,26 +23,74 @@ const Category = () => {
       <Helmet>
         <title>CraftyHub | {id}</title>
       </Helmet>
-      <h1 className="text-3xl font-bold mb-4">{id} Items</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {items.map((i) => (
+      <div className="bg-base-300 dark:bg-neutral-700 py-5">
+        <div className="w-[80%] mx-auto flex justify-between">
+          <div>
+            <h1 className="text-lg text-paraL dark:text-paraD font-raleway font-semibold">
+              MY ART & CRAFTS
+            </h1>
+            <p className="text-xs text-paraL dark:text-paraD font-raleway font-extralight">
+              Home/MY-ART&CRAFT
+            </p>
+          </div>
+          <div>
+            <h1 className="text-lg text-paraL dark:text-paraD font-raleway font-semibold">
+              CATEGORY :
+            </h1>
+            <p className="text-xs text-paraL dark:text-paraD font-raleway font-extralight">
+              #{id}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10 px-10">
+        {items.map((a) => (
           <div
-            key={i._id}
-            className="border p-4 rounded-lg shadow-lg hover:shadow-xl"
+            key={a._id}
+            className="card dark:bg-backL bg-backD shadow-md shadow-butL dark:shadow-butD dark:text-headL text-headD"
           >
-            <img
-              src={i.photo}
-              alt={i.item}
-              className="w-full h-32 object-cover rounded-lg"
-            />
-            <h3 className="text-xl font-semibold mt-2">{i.item}</h3>
-            <p className="text-gray-600">{i.description}</p>
-            <p className="font-bold">${i.price}</p>
-            <p className="text-yellow-500">Rating: {i.rating}</p>
-            <p>Processing Time: {i.time} days</p>
-            <a href={`/details/${i._id}`} className="btn mt-2">
-              View Details
-            </a>
+            <figure>
+              <img src={a.photo} className="w-full h-[200px] p-2" />
+            </figure>
+            <div className="card-body font-raleway">
+              <h2 className="card-title">{a.item}</h2>
+              <p className="text-sm font-semibold">
+                Category :{" "}
+                <span className="text-xs text-headD dark:text-headL font-merri font-thin">
+                  {a.category}
+                </span>
+              </p>
+              <p className="text-sm font-semibold">
+                Description :{" "}
+                <span className="text-xs text-headD dark:text-headL font-raleway font-thin">
+                  {a.description.split(" ").slice(0, 20).join(" ") +
+                    (a.description.split(" ").length > 20 ? "...." : "")}
+                </span>
+              </p>
+              <div className="card-actions justify-end">
+                <div>
+                  <ReactStarsRating
+                    isHalf={true}
+                    isEdit={false}
+                    size="15"
+                    primaryColor="gold"
+                    secondaryColor="gray"
+                    className="flex"
+                    value={a.rating}
+                  />
+                </div>
+                <div className="badge badge-outline dark:text-headL text-headD bg-linL dark:bg-linD font-merri">
+                  ${a.price}
+                </div>
+              </div>
+              <div className="flex gap-5 justify-center items-center mt-5">
+                <Link to={`/details/${a._id}`}>
+                  <button className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-xs font-bold hover:bg-butD dark:hover:bg-butL hover:text-headL hover:dark:text-headD transform transition-transform duration-500 ease-in-out hover:scale-110">
+                    View Details
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
         ))}
       </div>

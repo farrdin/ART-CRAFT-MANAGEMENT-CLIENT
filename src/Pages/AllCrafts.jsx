@@ -16,6 +16,14 @@ const AllCrafts = () => {
       <Helmet>
         <title>CraftyHub | All Items</title>
       </Helmet>
+      <div className="bg-base-300 dark:bg-neutral-700 py-5">
+        <h1 className="w-[80%] mx-auto text-lg text-paraL dark:text-paraD font-raleway font-semibold">
+          ART & CRAFT ITEMS
+        </h1>
+        <p className="w-[80%] mx-auto text-xs text-paraL dark:text-paraD font-raleway font-extralight">
+          Home/ART & CRAFT ITEMS
+        </p>
+      </div>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
