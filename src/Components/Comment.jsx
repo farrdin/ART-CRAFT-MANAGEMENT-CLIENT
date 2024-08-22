@@ -29,12 +29,14 @@ const Comment = () => {
             </span>
             <p className="quote text-lg text-headD font-raleway m lg:mt-14">
               <FaQuoteLeft />
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-              unde laboriosam culpa quia ut, iusto libero quaerat assumenda
-              aliquam veritatis aliquid iste totam tempore! Neque, odio.
-              Expedita voluptates, dolores rerum consequuntur vero voluptas
-              earum vel ab obcaecati sunt voluptate culpa placeat id officiis
-              iusto eos. Enim dicta ipsa ipsam obcaecati.
+              Thus Spoke Our Clients captures the heartfelt testimonials and
+              experiences shared by those who have engaged with our services.
+              Each clients words reflect their satisfaction, appreciation, and
+              the impact our work has had on their lives. From transforming
+              creative visions into reality to delivering exceptional quality,
+              our clients voices resonate with trust and gratitude. Their
+              feedback not only highlights our commitment to excellence but also
+              inspires us to continue exceeding expectations.
             </p>
           </div>
           <div className="mx-auto animate__animated animate__backInRight">

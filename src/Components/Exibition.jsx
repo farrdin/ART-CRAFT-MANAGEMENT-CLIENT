@@ -27,12 +27,12 @@ const Exibition = () => {
               Magical World of Art Denice Francisco
             </h1>
             <p className="text-lg text-headD font-raleway">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-              unde laboriosam culpa quia ut, iusto libero quaerat assumenda
-              aliquam veritatis aliquid iste totam tempore! Neque, odio.
-              Expedita voluptates, dolores rerum consequuntur vero voluptas
-              earum vel ab obcaecati sunt voluptate culpa placeat id officiis
-              iusto eos. Enim dicta ipsa ipsam obcaecati.
+              Magical World of Art by Denice Francisco invites you into a
+              vibrant realm where imagination and creativity come alive. Through
+              her art, Francisco captures the enchanting essence of everyday
+              life, transforming ordinary moments into extraordinary visual
+              experiences. Her work is a journey into a world of color, wonder,
+              and magic.
             </p>
             <Link
               to="about"

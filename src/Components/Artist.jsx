@@ -48,8 +48,9 @@ const Artist = () => {
               Caricature Artist at Work
             </h1>
             <p className="text-sm text-paraL dark:text-paraD w-[80%] mx-auto font-raleway font-extralight">
-              Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nullam
-              id arcu tortor. Sed get sit ame egestasquis.
+              A caricature artist at work brings humor and personality to life,
+              skillfully exaggerating features to create playful, unique
+              portraits.
             </p>
           </div>
         </div>
@@ -79,8 +80,8 @@ const Artist = () => {
               Creativity Finds Expression
             </h1>
             <p className="text-sm text-paraL dark:text-paraD w-[80%] mx-auto font-raleway font-extralight">
-              Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nullam
-              id arcu tortor. Sed get sit ame egestasquis.
+              Creativity finds expression in countless forms, turning ideas into
+              art, where imagination meets reality in innovative ways.
             </p>
           </div>
         </div>
@@ -110,8 +111,8 @@ const Artist = () => {
               Watercolor makes indelible Impression!
             </h1>
             <p className="text-sm text-paraL dark:text-paraD w-[80%] mx-auto font-raleway font-extralight">
-              Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nullam
-              id arcu tortor. Sed get sit ame egestasquis.
+              Watercolor makes an indelible impression, blending fluidity and
+              color to create delicate, lasting artistic memories.
             </p>
           </div>
         </div>
@@ -126,9 +127,8 @@ const Artist = () => {
 
             <div className="bg-backL dark:bg-backD absolute lg:right-[-55%] top-[30%] w-2/3 text-center p-5 space-y-3 shadow-lg shadow-headL ">
               <p className="text-sm font-light text-paraL dark:text-paraD font-raleway ">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis nemo architecto eveniet id sed ea, vero consequuntur
-                voluptas labore repellendus.
+                A waterfront scenario on oil canvas captures the serene beauty
+                of water and sky, brought to life by the artists brush.
               </p>
               <h1 className="text-base text-headL dark:text-headD font-raleway font-medium">
                 Waterfront Scenario - Oil canvas by an artist.
@@ -145,9 +145,9 @@ const Artist = () => {
 
             <div className="bg-backL dark:bg-backD absolute lg:left-[-55%] top-[30%] w-2/3 text-center p-5 space-y-3 shadow-lg shadow-headL">
               <p className="text-sm font-light text-paraL dark:text-paraD font-raleway ">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis nemo architecto eveniet id sed ea, vero consequuntur
-                voluptas labore repellendus.
+                Art & Craft paintings at the gallery showcase diverse
+                creativity, blending traditional techniques with modern flair,
+                each piece telling a unique story.
               </p>
               <h1 className="text-base text-headL dark:text-headD font-raleway font-medium">
                 Art & Craft paintings @ the art Galery.

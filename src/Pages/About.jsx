@@ -49,8 +49,8 @@ const About = () => {
             THE DIFFERENCE BETWEEN ART AND CRAFT
           </h1>
           <p className="text-xs text-headL dark:text-headD  font-raleway font-normal">
-            The toold used for both maybe differnt but the heart that sees is
-            the same.
+            Art expresses creativity and emotion, while craft focuses on
+            skilled, functional craftsmanship.
           </p>
 
           <TiHome
@@ -65,8 +65,8 @@ const About = () => {
             THE ARTISAN IS CREATOR
           </h1>
           <p className="text-xs text-headL dark:text-headD  font-raleway font-normal">
-            He sees everything and makes some thing out of the undifferentiated
-            mass.
+            The artisan is a creator, blending skill and imagination to craft
+            unique masterpieces.
           </p>
 
           <FaLeaf
@@ -81,7 +81,8 @@ const About = () => {
             ART IS CRAFT
           </h1>
           <p className="text-xs text-headL dark:text-headD  font-raleway font-normal">
-            Craft demands the third dimension of space while art creates it!
+            Art is craft elevated, where skill and creativity merge into
+            expressive masterpieces.
           </p>
 
           <FiKey
@@ -191,9 +192,9 @@ const About = () => {
               Terracotta Idols
             </h1>
             <p className="text-sm text-paraL dark:text-paraD font-light font-raleway ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              quis quam a nunc porttitor tempus. Sed eu lobortis tortor. Mauris
-              facilisis posuere nisl
+              Terracotta idols are crafted from clay, showcasing intricate
+              designs and cultural significance, blending artistry with
+              traditional craftsmanship.
             </p>
             <button className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-sm font-semibold hover:bg-butD dark:hover:bg-butL hover:text-headL hover:dark:text-headD">
               Learn More
@@ -204,9 +205,9 @@ const About = () => {
               Clay Model Toys for Export
             </h1>
             <p className="text-sm text-paraL dark:text-paraD font-light font-raleway ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              quis quam a nunc porttitor tempus. Sed eu lobortis tortor. Mauris
-              facilisis posuere nisl
+              Clay model toys for export feature handcrafted designs, combining
+              artistry and durability, showcasing cultural craftsmanship for
+              global markets.
             </p>
             <button className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-sm font-semibold hover:bg-butD dark:hover:bg-butL hover:text-headL hover:dark:text-headD">
               Learn More
@@ -217,9 +218,9 @@ const About = () => {
               Bhatik Work on Apparels
             </h1>
             <p className="text-sm text-paraL dark:text-paraD font-light font-raleway ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              quis quam a nunc porttitor tempus. Sed eu lobortis tortor. Mauris
-              facilisis posuere nisl
+              Batik work on apparels involves intricate, hand-dyed patterns,
+              creating unique, vibrant designs that highlight traditional
+              textile artistry.
             </p>
             <button className="btn bg-butL dark:bg-butD text-headD dark:text-headL font-raleway text-sm font-semibold hover:bg-butD dark:hover:bg-butL hover:text-headL hover:dark:text-headD">
               Learn More
