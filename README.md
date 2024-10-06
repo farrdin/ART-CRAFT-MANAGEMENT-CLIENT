@@ -9,3 +9,7 @@ Key Features of website :
 3. Personalized Profiles: Users can create accounts with profile pictures and names, fostering a sense of belonging within the craft community.
 4. Effortless Navigation: A well-structured navigation bar enables seamless exploration, including protected routes for authenticated actions like adding and managing craft items.
 5. Enhanced Discoverability: Provides curated sections such as "Art & Craft Categories" and "My Art & Craft List" for easy browsing and management of items, promoting discovery and organization.
+
+NEW Feature Updated :
+
+1. Added Seach Functionality IN Art And Craft page by Item Name.
