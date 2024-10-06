@@ -60,10 +60,6 @@ const Navbar = () => {
   );
   return (
     <div className="navbar bg-backL dark:bg-backD shadow-lg fixed top-0 z-10">
-      {/* Name/logo/------Home/Art&Craft Item/ Add Craft Item(protected route) / My art&Craft list(protected route)------Login/Register.
-
-      logged in na thakle register/login show korbe & login e click korle login page and register e click korle register page e redirect.
-		but logged in thakle navbar e user profile pic and name show korbe. and ---logOUt--- button show korbe click korle logout hoye jabe*/}
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

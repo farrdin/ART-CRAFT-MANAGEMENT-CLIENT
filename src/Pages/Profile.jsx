@@ -61,12 +61,6 @@ const Profile = () => {
           text: "Profile updated successfully!",
           icon: "success",
         });
-      } else {
-        Swal.fire({
-          title: "Congratulations!",
-          text: "Profile updated successfully!",
-          icon: "success",
-        });
       }
     } catch (error) {
       console.error("Error updating profile:", error.message);
